@@ -1,0 +1,4149 @@
+{
+  "feed": "FDF",
+  "description": {
+    "1" : "Inventory Ons and Offs Summary",
+    "2" : "Customer Summary",
+    "6" : "Enquiries",
+    "7" : "Customer Information (Your Benefits)",
+    "A" : "Account Summary",
+    "B" : "Group Plan Details",
+    "C" : "Itemised Call Details",
+    "D" : "Summarised Call Details",
+    "E" : "Services and Equipment",
+    "F" : "MIPP Memo Front Page",
+    "G" : "Directory Charges",
+    "H" : "Header",
+    "I" : "Previous Bill Details",
+    "J" : "Adjustments",
+    "K" : "Graph on Bill",
+    "L" : "Product Summary",
+    "M" : "Messages",
+    "MA" : "Aggregator or Hierarchy marker",
+    "MB" : "Service marker",
+    "MC" : "Service Type marker",
+    "MD" : "Document Reference Number marker",
+    "ME" : "MIPP/Group Plan Miscellaneous marker",
+    "MF" : "Original Document Reference marker",
+    "MG" : "GST adjustment marker",
+    "MH" : "Package marker",
+    "MM" : "Miscellaneous marker",
+    "MP" : "Pricing Plan marker",
+    "MQ" : "Pricing Sub Plan marker",
+    "MS" : "Section marker",
+    "MU" : "Usage/Call Type marker",
+    "MV" : "Directory Type marker",
+    "MW" : "Directory Product marker",
+    "MX" : "Directory Listing Number marker",
+    "MY" : "MIPP Account marker",
+    "MZ" : "Directory Miscellaneous marker",
+    "N" : "Service Ons and Offs Summary",
+    "O" : "Other Charges and Credits",
+    "Q" : "Discount Summary",
+    "R" : "Remit",
+    "R0" : "File Header",
+    "R1" : "Document Header",
+    "R3" : "Document Trailer",
+    "R6" : "Document Enquiries",
+    "R9" : "File Trailer",
+    "S" : "Service Summary",
+    "U" : "Usage Charges Summary",
+    "V" : "Summary of Charges",
+    "X" : "MIPP Memo Details",
+    "Y" : "Previous Payment Details"
+  },
+  "Common": [
+    {
+      "name": "Doc_Info_Record_Code",
+      "start": 0,
+      "len": 1
+    },
+    {
+      "name": "Common_Doc_Ref_No",
+      "start": 1,
+      "len": 10
+    },
+    {
+      "name": "Sec_Sort_Seq_No",
+      "start": 11,
+      "len": 9
+    },
+    {
+      "name": "Record_Type",
+      "start": 20,
+      "len": 1
+    },
+    {
+      "name": "Sec_Code",
+      "start": 21,
+      "len": 1
+    },
+    {
+      "name": "Data_Type",
+      "start": 22,
+      "len": 1
+    },
+    {
+      "name": "Search_Key",
+      "start": 23,
+      "len": 18
+    },
+    {
+      "name": "Service_Charge_ID",
+      "start": 41,
+      "len": 5
+    },
+    {
+      "name": "Display_Code",
+      "start": 46,
+      "len": 3
+    },
+    {
+      "name": "Line_Attr_1",
+      "start": 49,
+      "len": 2
+    },
+    {
+      "name": "Line_Attr_2",
+      "start": 51,
+      "len": 1
+    },
+    {
+      "name": "Line_Attr_3",
+      "start": 52,
+      "len": 1
+    },
+    {
+      "name": "Service_Charge_Item_Grp_Class_Service",
+      "start": 53,
+      "len": 5
+    },
+    {
+      "name": "Service_Charge_Item_Grp_Attr_Service",
+      "start": 58,
+      "len": 5
+    },
+    {
+      "name": "Service_Charge_Item_Grp_Type_Charge",
+      "start": 63,
+      "len": 5
+    },
+    {
+      "name": "Service_Charge_Item_Grp_Attr_Charge",
+      "start": 68,
+      "len": 5
+    }
+  ],
+  "R0": [
+    {
+      "name": "File_Header_Record_Code",
+      "start": 0,
+      "len": 1
+    },
+    {
+      "name": "Bill_Date",
+      "start": 1,
+      "len": 8
+    },
+    {
+      "name": "Bill_Pull_No",
+      "start": 9,
+      "len": 3
+    },
+    {
+      "name": "Telstra_ABN",
+      "start": 12,
+      "len": 11
+    }
+  ],
+  "R1": [
+    {
+      "name": "Doc_Header_Record_Code",
+      "start": 0,
+      "len": 1
+    },
+    {
+      "name": "Hier_ID",
+      "start": 1,
+      "len": 10
+    },
+    {
+      "name": "Gen_Business_Arrangement_Txt",
+      "start": 11,
+      "len": 10
+    },
+    {
+      "name": "Business_Arrangement_Type",
+      "start": 21,
+      "len": 2
+    },
+    {
+      "name": "Doc_Ref_No",
+      "start": 23,
+      "len": 10
+    },
+    {
+      "name": "Finance_Company_Code",
+      "start": 33,
+      "len": 4
+    },
+    {
+      "name": "Finance_Centre",
+      "start": 37,
+      "len": 12
+    },
+    {
+      "name": "Relative_Doc_No",
+      "start": 49,
+      "len": 9
+    },
+    {
+      "name": "Sec_Array",
+      "start": 58,
+      "len": 36
+    },
+    {
+      "name": "GBA_Check_Digit",
+      "start": 94,
+      "len": 1
+    },
+    {
+      "name": "CIDN",
+      "start": 95,
+      "len": 10
+    },
+    {
+      "name": "Repository_Flag",
+      "start": 105,
+      "len": 1
+    }
+  ],
+  "A": [
+    {
+      "name": "Charge_Type_Desc",
+      "start": 73,
+      "len": 50
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 123,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 140,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 157,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 174,
+      "len": 17
+    },
+    {
+      "name": "Price_With_Discounts_GST",
+      "start": 191,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 208,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 210,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 220,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 226,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 236,
+      "len": 30
+    },
+    {
+      "name": "Customer_Internal_No",
+      "start": 226,
+      "len": 14
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 280,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 288,
+      "len": 8
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 296,
+      "len": 7
+    },
+    {
+      "name": "Invoice_Display_Date",
+      "start": 303,
+      "len": 8
+    }
+  ],
+  "1": [
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 73,
+      "len": 30
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 103,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 120,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 137,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 154,
+      "len": 17
+    },
+    {
+      "name": "Price_Including_Discounts_GST",
+      "start": 171,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 188,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 190,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 200,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 206,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 216,
+      "len": 30
+    },
+    {
+      "name": "Trans_Date",
+      "start": 246,
+      "len": 8
+    },
+    {
+      "name": "Purchase_Order_No",
+      "start": 254,
+      "len": 16
+    },
+    {
+      "name": "On_Off_Txt",
+      "start": 270,
+      "len": 3
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 273,
+      "len": 7
+    },
+    {
+      "name": "Service_Order_Item_Quantity",
+      "start": 280,
+      "len": 6
+    },
+    {
+      "name": "Unit_Rate_Val_Without_GST",
+      "start": 286,
+      "len": 16
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 302,
+      "len": 50
+    },
+    {
+      "name": "Unit_Rate_Price_With_GST",
+      "start": 352,
+      "len": 16
+    }
+  ],
+  "B": [
+    {
+      "name": "Service_Type_Desc",
+      "start": 73,
+      "len": 30
+    },
+    {
+      "name": "Call_Type_Desc",
+      "start": 103,
+      "len": 45
+    },
+    {
+      "name": "Charge_Type_Desc",
+      "start": 148,
+      "len": 50
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 198,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 215,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 232,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 249,
+      "len": 17
+    },
+    {
+      "name": "Price_With_Discounts_GST",
+      "start": 266,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 283,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 285,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 295,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 301,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 311,
+      "len": 30
+    },
+    {
+      "name": "Pricing_Plan_Name",
+      "start": 341,
+      "len": 50
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 391,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 399,
+      "len": 8
+    },
+    {
+      "name": "Extracted_To_Date",
+      "start": 407,
+      "len": 8
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 415,
+      "len": 7
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 422,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 430,
+      "len": 8
+    },
+    {
+      "name": "Orig_Doc_Ref_No",
+      "start": 438,
+      "len": 10
+    },
+    {
+      "name": "Pricing_Plan_ID",
+      "start": 448,
+      "len": 8
+    },
+    {
+      "name": "Pricing_Sub_Plan_Name",
+      "start": 456,
+      "len": 30
+    },
+    {
+      "name": "Eligible_Charge_Val",
+      "start": 486,
+      "len": 16
+    },
+    {
+      "name": "Eligible_Charge_Price",
+      "start": 502,
+      "len": 16
+    }
+  ],
+  "C": [
+    {
+      "name": "Printable_Billing_Indicator",
+      "start": 73,
+      "len": 1
+    },
+    {
+      "name": "Service_Type_Desc",
+      "start": 74,
+      "len": 30
+    },
+    {
+      "name": "Call_Type_Desc",
+      "start": 104,
+      "len": 45
+    },
+    {
+      "name": "Unit_Desc",
+      "start": 149,
+      "len": 13
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 162,
+      "len": 50
+    },
+    {
+      "name": "Billing_Service_No_1",
+      "start": 212,
+      "len": 18
+    },
+    {
+      "name": "Billing_Service_No_2",
+      "start": 230,
+      "len": 18
+    },
+    {
+      "name": "Time_Amnt",
+      "start": 248,
+      "len": 17
+    },
+    {
+      "name": "Vol_Amnt",
+      "start": 265,
+      "len": 17
+    },
+    {
+      "name": "Vol_In_Full_Segments",
+      "start": 282,
+      "len": 11
+    },
+    {
+      "name": "Closed_User_Grp_ID",
+      "start": 293,
+      "len": 6
+    },
+    {
+      "name": "Speed",
+      "start": 299,
+      "len": 6
+    },
+    {
+      "name": "Sent_Usage_Beyond_Ratio",
+      "start": 305,
+      "len": 6
+    },
+    {
+      "name": "Speed_Allowance",
+      "start": 311,
+      "len": 6
+    },
+    {
+      "name": "Megabytes_Received",
+      "start": 317,
+      "len": 10
+    },
+    {
+      "name": "Speed_Usage",
+      "start": 327,
+      "len": 10
+    },
+    {
+      "name": "Megabytes_Sent",
+      "start": 337,
+      "len": 10
+    },
+    {
+      "name": "Received_Usage",
+      "start": 347,
+      "len": 10
+    },
+    {
+      "name": "Received_Allowable",
+      "start": 357,
+      "len": 10
+    },
+    {
+      "name": "Cache_Received",
+      "start": 367,
+      "len": 10
+    },
+    {
+      "name": "Sent_Usage",
+      "start": 377,
+      "len": 10
+    },
+    {
+      "name": "Percent_Utilisation",
+      "start": 387,
+      "len": 10
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 397,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 414,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 431,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 448,
+      "len": 17
+    },
+    {
+      "name": "Price_With_Discounts_GST",
+      "start": 465,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 482,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 484,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 494,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 500,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 510,
+      "len": 30
+    },
+    {
+      "name": "Post_Bill_Caller_ID",
+      "start": 540,
+      "len": 22
+    },
+    {
+      "name": "Gen_Duration",
+      "start": 562,
+      "len": 10
+    },
+    {
+      "name": "Gen_Quantity",
+      "start": 572,
+      "len": 11
+    },
+    {
+      "name": "Legend_Code_1",
+      "start": 583,
+      "len": 1
+    },
+    {
+      "name": "Legend_Desc_1",
+      "start": 584,
+      "len": 30
+    },
+    {
+      "name": "Legend_Code_2",
+      "start": 614,
+      "len": 1
+    },
+    {
+      "name": "Legend_Desc_2",
+      "start": 615,
+      "len": 30
+    },
+    {
+      "name": "Unit_Rate_Val_Without_GST",
+      "start": 645,
+      "len": 16
+    },
+    {
+      "name": "To_Area",
+      "start": 661,
+      "len": 12
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 673,
+      "len": 30
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 703,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 711,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_Start_Time",
+      "start": 719,
+      "len": 8
+    },
+    {
+      "name": "Message_Rate_Period_Desc",
+      "start": 727,
+      "len": 10
+    },
+    {
+      "name": "Explanation",
+      "start": 737,
+      "len": 21
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 758,
+      "len": 7
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 765,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 773,
+      "len": 8
+    },
+    {
+      "name": "Base_Rate_Val_Without_GST",
+      "start": 781,
+      "len": 16
+    },
+    {
+      "name": "Discount_Earned_Indicator",
+      "start": 797,
+      "len": 1
+    },
+    {
+      "name": "Capped_Indicator",
+      "start": 798,
+      "len": 1
+    },
+    {
+      "name": "Invoice_Display_Date",
+      "start": 799,
+      "len": 8
+    },
+    {
+      "name": "Unit_Rate_Price_With_GST",
+      "start": 807,
+      "len": 16
+    },
+    {
+      "name": "Base_Rate_Price_With_GST",
+      "start": 823,
+      "len": 16
+    },
+    {
+      "name": "Event_File_Instruction",
+      "start": 839,
+      "len": 8
+    },
+    {
+      "name": "Event_Record_Seq",
+      "start": 847,
+      "len": 8
+    }
+  ],
+  "D": [
+    {
+      "name": "Printable_Billing_Indicator",
+      "start": 73,
+      "len": 1
+    },
+    {
+      "name": "Service_Type_Desc",
+      "start": 74,
+      "len": 30
+    },
+    {
+      "name": "Call_Type_Desc",
+      "start": 104,
+      "len": 45
+    },
+    {
+      "name": "Unit_Desc",
+      "start": 149,
+      "len": 13
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 162,
+      "len": 50
+    },
+    {
+      "name": "Billing_Service_No_1",
+      "start": 212,
+      "len": 18
+    },
+    {
+      "name": "Billing_Service_No_2",
+      "start": 230,
+      "len": 18
+    },
+    {
+      "name": "Time_Amnt",
+      "start": 248,
+      "len": 17
+    },
+    {
+      "name": "Vol_Amnt",
+      "start": 265,
+      "len": 17
+    },
+    {
+      "name": "Vol_In_Full_Segments",
+      "start": 282,
+      "len": 11
+    },
+    {
+      "name": "Closed_User_Grp_ID",
+      "start": 293,
+      "len": 6
+    },
+    {
+      "name": "Speed",
+      "start": 299,
+      "len": 6
+    },
+    {
+      "name": "Sent_Usage_Beyond_Ratio",
+      "start": 305,
+      "len": 6
+    },
+    {
+      "name": "Speed_Allowance",
+      "start": 311,
+      "len": 6
+    },
+    {
+      "name": "Megabytes_Received",
+      "start": 317,
+      "len": 10
+    },
+    {
+      "name": "Speed_Usage",
+      "start": 327,
+      "len": 10
+    },
+    {
+      "name": "Megabytes_Sent",
+      "start": 337,
+      "len": 10
+    },
+    {
+      "name": "Received_Usage",
+      "start": 347,
+      "len": 10
+    },
+    {
+      "name": "Received_Allowable",
+      "start": 357,
+      "len": 10
+    },
+    {
+      "name": "Cache_Received",
+      "start": 367,
+      "len": 10
+    },
+    {
+      "name": "Sent_Usage",
+      "start": 377,
+      "len": 10
+    },
+    {
+      "name": "Percent_Utilisation",
+      "start": 387,
+      "len": 10
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 397,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 414,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 431,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 448,
+      "len": 17
+    },
+    {
+      "name": "Price_With_Discounts_GST",
+      "start": 465,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 482,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 484,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 494,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 500,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 510,
+      "len": 30
+    },
+    {
+      "name": "Post_Bill_Caller_ID",
+      "start": 540,
+      "len": 22
+    },
+    {
+      "name": "Gen_Duration",
+      "start": 562,
+      "len": 10
+    },
+    {
+      "name": "Gen_Quantity",
+      "start": 572,
+      "len": 11
+    },
+    {
+      "name": "Legend_Code_1",
+      "start": 583,
+      "len": 1
+    },
+    {
+      "name": "Legend_Desc_1",
+      "start": 584,
+      "len": 30
+    },
+    {
+      "name": "Legend_Code_2",
+      "start": 614,
+      "len": 1
+    },
+    {
+      "name": "Legend_Desc_2",
+      "start": 615,
+      "len": 30
+    },
+    {
+      "name": "Unit_Rate_Val_Without_GST",
+      "start": 645,
+      "len": 16
+    },
+    {
+      "name": "To_Area",
+      "start": 661,
+      "len": 12
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 673,
+      "len": 30
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 703,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 711,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_Start_Time",
+      "start": 719,
+      "len": 8
+    },
+    {
+      "name": "Message_Rate_Period_Desc",
+      "start": 727,
+      "len": 10
+    },
+    {
+      "name": "Explanation",
+      "start": 737,
+      "len": 21
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 758,
+      "len": 7
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 765,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 773,
+      "len": 8
+    },
+    {
+      "name": "Base_Rate_Val_Without_GST",
+      "start": 781,
+      "len": 16
+    },
+    {
+      "name": "Discount_Earned_Indicator",
+      "start": 797,
+      "len": 1
+    },
+    {
+      "name": "Capped_Indicator",
+      "start": 798,
+      "len": 1
+    },
+    {
+      "name": "Invoice_Display_Date",
+      "start": 799,
+      "len": 8
+    },
+    {
+      "name": "Unit_Rate_Price_With_GST",
+      "start": 807,
+      "len": 16
+    },
+    {
+      "name": "Base_Rate_Price_With_GST",
+      "start": 823,
+      "len": 16
+    },
+    {
+      "name": "Event_File_Instruction",
+      "start": 839,
+      "len": 8
+    },
+    {
+      "name": "Event_Record_Seq",
+      "start": 847,
+      "len": 8
+    }
+  ],
+  "E": [
+    {
+      "name": "Trans_Type_Desc",
+      "start": 73,
+      "len": 25
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 98,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 115,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 132,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 149,
+      "len": 17
+    },
+    {
+      "name": "Price_With_Discounts_GST",
+      "start": 166,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 183,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 185,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 195,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 201,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 211,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_1",
+      "start": 241,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_2",
+      "start": 271,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_3",
+      "start": 301,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_4",
+      "start": 331,
+      "len": 30
+    },
+    {
+      "name": "Service_Order_Item_Quantity",
+      "start": 361,
+      "len": 6
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 367,
+      "len": 50
+    },
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 417,
+      "len": 30
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 447,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 455,
+      "len": 8
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 463,
+      "len": 7
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 470,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 478,
+      "len": 8
+    },
+    {
+      "name": "Primary_Ext_Suffix",
+      "start": 486,
+      "len": 1
+    },
+    {
+      "name": "Primary_Ext_EPAC_Code",
+      "start": 487,
+      "len": 6
+    },
+    {
+      "name": "Primary_Ext_Line_No",
+      "start": 493,
+      "len": 4
+    },
+    {
+      "name": "Secondary_Ext_Suffix",
+      "start": 497,
+      "len": 1
+    },
+    {
+      "name": "Secondary_Ext_Line_No",
+      "start": 498,
+      "len": 4
+    },
+    {
+      "name": "Product_Location_1",
+      "start": 502,
+      "len": 30
+    },
+    {
+      "name": "Product_Location_2",
+      "start": 532,
+      "len": 30
+    },
+    {
+      "name": "Product_Location_3",
+      "start": 562,
+      "len": 30
+    },
+    {
+      "name": "Product_Desc_1",
+      "start": 592,
+      "len": 30
+    },
+    {
+      "name": "Product_Desc_2",
+      "start": 622,
+      "len": 30
+    },
+    {
+      "name": "Product_Desc_3",
+      "start": 652,
+      "len": 30
+    },
+    {
+      "name": "Unit_Rate_Val_Without_GST",
+      "start": 682,
+      "len": 16
+    },
+    {
+      "name": "Purchase_Order_No",
+      "start": 698,
+      "len": 16
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 714,
+      "len": 30
+    },
+    {
+      "name": "Unit_Rate_Price_With_GST",
+      "start": 744,
+      "len": 16
+    },
+    {
+      "name": "Service_Arrangement_Type_Code",
+      "start": 760,
+      "len": 4
+    },
+    {
+      "name": "Configuration_Start_Date",
+      "start": 764,
+      "len": 8
+    },
+    {
+      "name": "Configuration_End_Date",
+      "start": 772,
+      "len": 8
+    },
+    {
+      "name": "Permanent_Virt_Circuit_Type_Code",
+      "start": 780,
+      "len": 4
+    },
+    {
+      "name": "A_Service_Type",
+      "start": 780,
+      "len": 2
+    },
+    {
+      "name": "B_Service_Type",
+      "start": 782,
+      "len": 2
+    },
+    {
+      "name": "Data_Service_No_Suffix",
+      "start": 784,
+      "len": 1
+    },
+    {
+      "name": "Permanent_Virt_Circuit_Ext_No",
+      "start": 785,
+      "len": 4
+    },
+    {
+      "name": "A_End_Network_Service_Type_Code",
+      "start": 789,
+      "len": 1
+    },
+    {
+      "name": "A_End_National_Service_No",
+      "start": 790,
+      "len": 18
+    },
+    {
+      "name": "B_End_Network_Service_Type_Code",
+      "start": 808,
+      "len": 1
+    },
+    {
+      "name": "B_End_National_Service_No",
+      "start": 809,
+      "len": 18
+    },
+    {
+      "name": "A_End_Data_Link_Control_Id_Virt_Path",
+      "start": 827,
+      "len": 4
+    },
+    {
+      "name": "A_End_Commited_Info_Rate_Virt_Chan",
+      "start": 831,
+      "len": 7
+    },
+    {
+      "name": "A_End_Data_Link_Control_Id",
+      "start": 827,
+      "len": 4
+    },
+    {
+      "name": "A_End_Commited_Info_Rate",
+      "start": 831,
+      "len": 7
+    },
+    {
+      "name": "A_End_Virt_Path_Id",
+      "start": 827,
+      "len": 4
+    },
+    {
+      "name": "A_End_Virt_Chan_Id",
+      "start": 831,
+      "len": 5
+    },
+    {
+      "name": "B_End_Data_Link_Control_Id_Virt_Path",
+      "start": 838,
+      "len": 4
+    },
+    {
+      "name": "B_End_Commited_Info_Rate_Virt_Chan",
+      "start": 842,
+      "len": 7
+    },
+    {
+      "name": "B_End_Data_Link_Control_Id",
+      "start": 838,
+      "len": 4
+    },
+    {
+      "name": "B_End_Commited_Info_Rate",
+      "start": 842,
+      "len": 7
+    },
+    {
+      "name": "B_End_Virt_Path_Id",
+      "start": 842,
+      "len": 5
+    },
+    {
+      "name": "B_End_Virt_Chan_Id",
+      "start": 847,
+      "len": 2
+    },
+    {
+      "name": "Filler",
+      "start": 780,
+      "len": 4
+    },
+    {
+      "name": "Access_Line_Type_Code",
+      "start": 784,
+      "len": 10
+    },
+    {
+      "name": "Bandwidth",
+      "start": 784,
+      "len": 10
+    },
+    {
+      "name": "Charge_Zone",
+      "start": 794,
+      "len": 25
+    },
+    {
+      "name": "Data_Service_Found_Code",
+      "start": 780,
+      "len": 4
+    },
+    {
+      "name": "Line_Speed",
+      "start": 849,
+      "len": 11
+    },
+    {
+      "name": "Aggregate_Speed",
+      "start": 860,
+      "len": 11
+    }
+  ],
+  "F": [
+    {
+      "name": "Desc_Charge_Type_Discounted",
+      "start": 73,
+      "len": 65
+    },
+    {
+      "name": "Service_Type_Desc",
+      "start": 138,
+      "len": 30
+    },
+    {
+      "name": "Call_Type_Desc",
+      "start": 168,
+      "len": 45
+    },
+    {
+      "name": "Gross_Amnt_Without_Discount_GST",
+      "start": 213,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 230,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 247,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 264,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 281,
+      "len": 17
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 298,
+      "len": 30
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 328,
+      "len": 50
+    },
+    {
+      "name": "Eligible_Charge_Val",
+      "start": 378,
+      "len": 16
+    },
+    {
+      "name": "Enquiry_Name",
+      "start": 394,
+      "len": 30
+    },
+    {
+      "name": "Enquiry_Telephone_No",
+      "start": 424,
+      "len": 11
+    },
+    {
+      "name": "Formatted_Customer_Name",
+      "start": 435,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_1",
+      "start": 465,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_2",
+      "start": 495,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_3",
+      "start": 525,
+      "len": 32
+    },
+    {
+      "name": "Gen_Business_Arrangement",
+      "start": 557,
+      "len": 10
+    },
+    {
+      "name": "Extracted_To_Date",
+      "start": 567,
+      "len": 8
+    },
+    {
+      "name": "Gen_Quantity",
+      "start": 575,
+      "len": 11
+    },
+    {
+      "name": "Pricing_Plan_Name",
+      "start": 586,
+      "len": 50
+    },
+    {
+      "name": "Pricing_Sub_Plan_Name",
+      "start": 636,
+      "len": 30
+    },
+    {
+      "name": "Eligible_Charge_Price",
+      "start": 666,
+      "len": 16
+    },
+    {
+      "name": "Customer_Negotiated_Rate",
+      "start": 682,
+      "len": 25
+    }
+  ],
+  "G": [
+    {
+      "name": "Trans_Desc",
+      "start": 73,
+      "len": 90
+    },
+    {
+      "name": "Listing_No",
+      "start": 163,
+      "len": 30
+    },
+    {
+      "name": "Dir_Product_Desc",
+      "start": 193,
+      "len": 40
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 233,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 250,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 267,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 284,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 301,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 318,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 320,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 330,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 336,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 346,
+      "len": 30
+    },
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 376,
+      "len": 30
+    },
+    {
+      "name": "Service_Order_Item_Quantity",
+      "start": 406,
+      "len": 6
+    },
+    {
+      "name": "Gen_Quantity",
+      "start": 412,
+      "len": 11
+    },
+    {
+      "name": "Purchase_Order_No",
+      "start": 423,
+      "len": 16
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 439,
+      "len": 8
+    },
+    {
+      "name": "Unit_Rate_Val_Without_GST",
+      "start": 447,
+      "len": 16
+    },
+    {
+      "name": "Installment_Payment_No",
+      "start": 463,
+      "len": 4
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 467,
+      "len": 7
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 474,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 482,
+      "len": 8
+    },
+    {
+      "name": "Trans_Type_Desc",
+      "start": 490,
+      "len": 25
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 515,
+      "len": 30
+    },
+    {
+      "name": "Unit_Rate_Price_With_GST",
+      "start": 545,
+      "len": 16
+    }
+  ],
+  "H": [
+    {
+      "name": "Doc_Status",
+      "start": 73,
+      "len": 11
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 84,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 101,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 118,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 135,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 152,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 169,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 171,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 181,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 187,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 197,
+      "len": 30
+    },
+    {
+      "name": "Gen_Business_Arrangement",
+      "start": 227,
+      "len": 10
+    },
+    {
+      "name": "Doc_Ref_No",
+      "start": 237,
+      "len": 10
+    },
+    {
+      "name": "Bill_No",
+      "start": 247,
+      "len": 12
+    },
+    {
+      "name": "Bill_Date",
+      "start": 259,
+      "len": 8
+    },
+    {
+      "name": "Enquiry_Telephone_No",
+      "start": 267,
+      "len": 11
+    },
+    {
+      "name": "Previous_Period_Invoice_Amnt",
+      "start": 278,
+      "len": 17
+    },
+    {
+      "name": "Total_Payment_Amnt",
+      "start": 295,
+      "len": 17
+    },
+    {
+      "name": "Total_Doc_Adjustment_Amnt",
+      "start": 312,
+      "len": 17
+    },
+    {
+      "name": "Balance_Brought_Forward_Amnt",
+      "start": 329,
+      "len": 17
+    },
+    {
+      "name": "Rounded_Total_Amnt_Payable",
+      "start": 346,
+      "len": 17
+    },
+    {
+      "name": "Payment_Due_Date",
+      "start": 363,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity",
+      "start": 371,
+      "len": 1
+    },
+    {
+      "name": "Courtesy_Title",
+      "start": 372,
+      "len": 4
+    },
+    {
+      "name": "Given_Names",
+      "start": 376,
+      "len": 30
+    },
+    {
+      "name": "Family_Name",
+      "start": 406,
+      "len": 30
+    },
+    {
+      "name": "Personal_Job_Function",
+      "start": 436,
+      "len": 30
+    },
+    {
+      "name": "Firm_Or_Company_Name",
+      "start": 466,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_1",
+      "start": 496,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_2",
+      "start": 526,
+      "len": 30
+    },
+    {
+      "name": "City_Name",
+      "start": 556,
+      "len": 23
+    },
+    {
+      "name": "State_Abbreviation",
+      "start": 579,
+      "len": 3
+    },
+    {
+      "name": "Post_Code",
+      "start": 582,
+      "len": 4
+    },
+    {
+      "name": "Customer_Country_Residence",
+      "start": 586,
+      "len": 20
+    },
+    {
+      "name": "International_Post_Code",
+      "start": 606,
+      "len": 10
+    },
+    {
+      "name": "Tax_Invoice_Txt",
+      "start": 616,
+      "len": 21
+    },
+    {
+      "name": "Flat_Fee_Indicator",
+      "start": 637,
+      "len": 1
+    },
+    {
+      "name": "Doc_Issue_Date",
+      "start": 638,
+      "len": 8
+    },
+    {
+      "name": "Marketing_Customer_Grp_Code",
+      "start": 646,
+      "len": 4
+    },
+    {
+      "name": "Customer_Revenue_Org_Unit",
+      "start": 650,
+      "len": 6
+    },
+    {
+      "name": "Servicing_Org_Unit",
+      "start": 656,
+      "len": 6
+    },
+    {
+      "name": "Customer_Doc_Grp_Code",
+      "start": 662,
+      "len": 6
+    },
+    {
+      "name": "Transfer_Invoice_Arrangement_ID",
+      "start": 668,
+      "len": 10
+    },
+    {
+      "name": "Customer_Dispute_Ref_No",
+      "start": 678,
+      "len": 10
+    }
+  ],
+  "I": [
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 73,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 90,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 107,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 124,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 141,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 158,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 160,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 170,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 176,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 186,
+      "len": 30
+    },
+    {
+      "name": "Orig_Doc_Ref_No",
+      "start": 216,
+      "len": 10
+    },
+    {
+      "name": "Orig_Bill_Pull_Date",
+      "start": 226,
+      "len": 8
+    },
+    {
+      "name": "Trans_Date",
+      "start": 234,
+      "len": 8
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 242,
+      "len": 50
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 292,
+      "len": 7
+    },
+    {
+      "name": "Dispute_Ref_No",
+      "start": 299,
+      "len": 10
+    },
+    {
+      "name": "Customer_Dispute_Ref_No",
+      "start": 309,
+      "len": 10
+    }
+  ],
+  "J": [
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 73,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 90,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 107,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 124,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 141,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 158,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 160,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 170,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 176,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 186,
+      "len": 30
+    },
+    {
+      "name": "Orig_Bill_Pull_Date",
+      "start": 216,
+      "len": 8
+    },
+    {
+      "name": "Orig_Doc_Ref_No",
+      "start": 224,
+      "len": 10
+    },
+    {
+      "name": "Formatted_Service_No",
+      "start": 234,
+      "len": 18
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 252,
+      "len": 50
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 302,
+      "len": 7
+    },
+    {
+      "name": "Dispute_Ref_No",
+      "start": 309,
+      "len": 10
+    },
+    {
+      "name": "Customer_Dispute_Ref_No",
+      "start": 319,
+      "len": 10
+    }
+  ],
+  "K": [
+    {
+      "name": "Doc_Issue_Date",
+      "start": 73,
+      "len": 8
+    },
+    {
+      "name": "Graph_Date_1",
+      "start": 81,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_1",
+      "start": 89,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_1",
+      "start": 90,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_1",
+      "start": 107,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_1",
+      "start": 124,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_2",
+      "start": 135,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_2",
+      "start": 143,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_2",
+      "start": 144,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_2",
+      "start": 161,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_2",
+      "start": 178,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_3",
+      "start": 189,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_3",
+      "start": 197,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_3",
+      "start": 198,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_3",
+      "start": 215,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_3",
+      "start": 232,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_4",
+      "start": 243,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_4",
+      "start": 251,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_4",
+      "start": 252,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_4",
+      "start": 269,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_4",
+      "start": 286,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_5",
+      "start": 297,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_5",
+      "start": 305,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_5",
+      "start": 306,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_5",
+      "start": 323,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_5",
+      "start": 340,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_6",
+      "start": 351,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_6",
+      "start": 359,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_6",
+      "start": 360,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_6",
+      "start": 377,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_6",
+      "start": 394,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_7",
+      "start": 405,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_7",
+      "start": 413,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_7",
+      "start": 414,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_7",
+      "start": 431,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_7",
+      "start": 448,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_8",
+      "start": 459,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_8",
+      "start": 467,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_8",
+      "start": 468,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_8",
+      "start": 485,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_8",
+      "start": 502,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_9",
+      "start": 513,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_9",
+      "start": 521,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_9",
+      "start": 522,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_9",
+      "start": 539,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_9",
+      "start": 556,
+      "len": 11
+    },
+    {
+      "name": "Graph_Date_10",
+      "start": 567,
+      "len": 8
+    },
+    {
+      "name": "Billing_Periodicity_10",
+      "start": 575,
+      "len": 1
+    },
+    {
+      "name": "Val_Excl_GST_10",
+      "start": 576,
+      "len": 17
+    },
+    {
+      "name": "Price_Incl_GST_10",
+      "start": 593,
+      "len": 17
+    },
+    {
+      "name": "Calls_Count_10",
+      "start": 610,
+      "len": 11
+    }
+  ],
+  "L": [
+    {
+      "name": "Charge_Type_Desc",
+      "start": 73,
+      "len": 50
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 123,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 140,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 157,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 174,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 191,
+      "len": 17
+    },
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 208,
+      "len": 30
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 238,
+      "len": 8
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 246,
+      "len": 7
+    },
+    {
+      "name": "Invoice_Display_Date",
+      "start": 253,
+      "len": 8
+    },
+    {
+      "name": "Date_Txt",
+      "start": 261,
+      "len": 2
+    }
+  ],
+  "M": [
+    {
+      "name": "Gen_Txt_1",
+      "start": 73,
+      "len": 50
+    },
+    {
+      "name": "Detail_Txt_Seq_No",
+      "start": 123,
+      "len": 4
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 127,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 129,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 139,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 145,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 155,
+      "len": 30
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 185,
+      "len": 7
+    }
+  ],
+  "N": [
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 73,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 75,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 85,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 91,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 101,
+      "len": 30
+    },
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 131,
+      "len": 30
+    },
+    {
+      "name": "Trans_Date",
+      "start": 161,
+      "len": 8
+    },
+    {
+      "name": "Service_Location_1",
+      "start": 169,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_2",
+      "start": 199,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_3",
+      "start": 229,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_4",
+      "start": 259,
+      "len": 30
+    },
+    {
+      "name": "Purchase_Order_No",
+      "start": 289,
+      "len": 16
+    },
+    {
+      "name": "On_Off_Txt",
+      "start": 305,
+      "len": 3
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 308,
+      "len": 7
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 315,
+      "len": 30
+    }
+  ],
+  "O": [
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 73,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 90,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_GST",
+      "start": 107,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 124,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 141,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 158,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 160,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 170,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 176,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 186,
+      "len": 30
+    },
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 216,
+      "len": 30
+    },
+    {
+      "name": "Service_Order_Item_Quantity",
+      "start": 246,
+      "len": 6
+    },
+    {
+      "name": "Gen_Quantity",
+      "start": 252,
+      "len": 11
+    },
+    {
+      "name": "OCC_Desc",
+      "start": 263,
+      "len": 60
+    },
+    {
+      "name": "Purchase_Order_No",
+      "start": 323,
+      "len": 16
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 339,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 347,
+      "len": 8
+    },
+    {
+      "name": "Unit_Rate_Val_Without_GST",
+      "start": 355,
+      "len": 16
+    },
+    {
+      "name": "Installment_Payment_No",
+      "start": 371,
+      "len": 4
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 375,
+      "len": 7
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 382,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 390,
+      "len": 8
+    },
+    {
+      "name": "OCC_Trans_Desc",
+      "start": 398,
+      "len": 90
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 488,
+      "len": 30
+    },
+    {
+      "name": "Provider_Merchant_ID",
+      "start": 518,
+      "len": 6
+    },
+    {
+      "name": "Merchant_Name",
+      "start": 524,
+      "len": 30
+    },
+    {
+      "name": "Merchant_ABN",
+      "start": 554,
+      "len": 30
+    },
+    {
+      "name": "Merchant_Formatted_Contact_No",
+      "start": 584,
+      "len": 12
+    },
+    {
+      "name": "BIT_Start_Time",
+      "start": 596,
+      "len": 8
+    },
+    {
+      "name": "Trans_Type_Desc",
+      "start": 604,
+      "len": 25
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 629,
+      "len": 50
+    },
+    {
+      "name": "Unit_Rate_Price_With_GST",
+      "start": 679,
+      "len": 16
+    },
+    {
+      "name": "Trans_Rate_Txt",
+      "start": 695,
+      "len": 20
+    }
+  ],
+  "Q": [
+    {
+      "name": "Service_Type_Desc",
+      "start": 73,
+      "len": 30
+    },
+    {
+      "name": "Call_Type_Desc",
+      "start": 103,
+      "len": 45
+    },
+    {
+      "name": "Charge_Type_Desc",
+      "start": 148,
+      "len": 50
+    },
+    {
+      "name": "Billing_Service_No",
+      "start": 198,
+      "len": 18
+    },
+    {
+      "name": "Call_Trans_Count",
+      "start": 216,
+      "len": 10
+    },
+    {
+      "name": "Gen_Duration",
+      "start": 226,
+      "len": 10
+    },
+    {
+      "name": "Block_Time_Allocated_Minutes",
+      "start": 236,
+      "len": 6
+    },
+    {
+      "name": "Block_Time_Used_Minutes",
+      "start": 242,
+      "len": 6
+    },
+    {
+      "name": "Block_Time_Additional_Minutes",
+      "start": 248,
+      "len": 6
+    },
+    {
+      "name": "Flexcab_Concession_Indicator",
+      "start": 254,
+      "len": 1
+    },
+    {
+      "name": "Gross_Amnt_Excluding_GST",
+      "start": 255,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 272,
+      "len": 17
+    },
+    {
+      "name": "Net_Discount_Amnt",
+      "start": 289,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 306,
+      "len": 17
+    },
+    {
+      "name": "Price_Including_Discounts_GST",
+      "start": 323,
+      "len": 17
+    },
+    {
+      "name": "Alpha_GIRN",
+      "start": 340,
+      "len": 7
+    },
+    {
+      "name": "Pricing_Plan_Name",
+      "start": 347,
+      "len": 50
+    },
+    {
+      "name": "Pricing_Subplan_Name",
+      "start": 397,
+      "len": 30
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 427,
+      "len": 30
+    },
+    {
+      "name": "Discount_Percent_Off",
+      "start": 457,
+      "len": 8
+    },
+    {
+      "name": "Gen_Quantity",
+      "start": 465,
+      "len": 11
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 476,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 484,
+      "len": 8
+    },
+    {
+      "name": "Eligible_Charge_Val",
+      "start": 492,
+      "len": 16
+    },
+    {
+      "name": "Eligible_Charge_Price",
+      "start": 508,
+      "len": 16
+    },
+    {
+      "name": "Eligible_No_Contract_Name",
+      "start": 524,
+      "len": 20
+    },
+    {
+      "name": "Unit_Rate_Val_Excluding_GST",
+      "start": 544,
+      "len": 16
+    },
+    {
+      "name": "Unit_Rate_Price_Including_GST",
+      "start": 560,
+      "len": 16
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 576,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 584,
+      "len": 8
+    },
+    {
+      "name": "Extract_To_Date",
+      "start": 592,
+      "len": 8
+    },
+    {
+      "name": "Time_Allocation_Prefixed_Txt",
+      "start": 600,
+      "len": 20
+    },
+    {
+      "name": "Time_Used_Prefixed_Txt",
+      "start": 620,
+      "len": 10
+    },
+    {
+      "name": "Time_Additional_Suffixed_Txt",
+      "start": 630,
+      "len": 10
+    },
+    {
+      "name": "Time_Amnt_Suffixed_Txt",
+      "start": 640,
+      "len": 10
+    },
+    {
+      "name": "Call_Count_Suffixed_Txt",
+      "start": 650,
+      "len": 10
+    },
+    {
+      "name": "Discount_Amnt_Prefixed_Txt",
+      "start": 660,
+      "len": 10
+    },
+    {
+      "name": "Discount_Period_Display_Start_Date",
+      "start": 670,
+      "len": 8
+    },
+    {
+      "name": "Discount_Period_Display_End_Date",
+      "start": 678,
+      "len": 8
+    }
+  ],
+  "R3": [
+    {
+      "name": "Doc_Trailer_Record_Code",
+      "start": 0,
+      "len": 1
+    },
+    {
+      "name": "Hier_ID",
+      "start": 1,
+      "len": 10
+    },
+    {
+      "name": "Gen_Business_Arrangement_Txt",
+      "start": 11,
+      "len": 10
+    },
+    {
+      "name": "Business_Arrangement_Type",
+      "start": 21,
+      "len": 2
+    },
+    {
+      "name": "Doc_Ref_No",
+      "start": 23,
+      "len": 10
+    },
+    {
+      "name": "FDF_Doc_Record_Count",
+      "start": 33,
+      "len": 9
+    }
+  ],
+  "R6": [
+    {
+      "name": "Fdf_Bill_Txt",
+      "start": 138,
+      "len": 79
+    }
+  ],
+  "R9": [
+    {
+      "name": "File_Trailer_Record_Code",
+      "start": 0,
+      "len": 1
+    },
+    {
+      "name": "FDF_Doc_Record_Count",
+      "start": 1,
+      "len": 9
+    }
+  ],
+  "R": [
+    {
+      "name": "Gross_Amnt_Excl_Discount_GST",
+      "start": 73,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 90,
+      "len": 17
+    },
+    {
+      "name": "Amnt_Net_Discounts_Excl_GST",
+      "start": 107,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 124,
+      "len": 17
+    },
+    {
+      "name": "Price_With_Discounts_GST",
+      "start": 141,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 158,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 160,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 170,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 176,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 186,
+      "len": 30
+    },
+    {
+      "name": "Gen_Business_Arrangement",
+      "start": 216,
+      "len": 10
+    },
+    {
+      "name": "Doc_Ref_No",
+      "start": 226,
+      "len": 10
+    },
+    {
+      "name": "Enquiry_Telephone_No",
+      "start": 236,
+      "len": 11
+    },
+    {
+      "name": "Payment_Due_Data",
+      "start": 247,
+      "len": 8
+    },
+    {
+      "name": "Formatted_Customer_Name",
+      "start": 255,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_1",
+      "start": 285,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_2",
+      "start": 315,
+      "len": 30
+    },
+    {
+      "name": "Adr_Line_3",
+      "start": 345,
+      "len": 32
+    },
+    {
+      "name": "Remit_Adr_Line_1",
+      "start": 377,
+      "len": 30
+    },
+    {
+      "name": "Remit_City_Name",
+      "start": 407,
+      "len": 23
+    },
+    {
+      "name": "Remit_State_Abbreviation",
+      "start": 430,
+      "len": 3
+    },
+    {
+      "name": "Postal_Region_Area_Code",
+      "start": 433,
+      "len": 1
+    },
+    {
+      "name": "Postal_Area_Division_Code",
+      "start": 434,
+      "len": 3
+    },
+    {
+      "name": "Payment_By_Telephone_No",
+      "start": 437,
+      "len": 12
+    },
+    {
+      "name": "Gen_Business_Arragement_2",
+      "start": 449,
+      "len": 10
+    },
+    {
+      "name": "OCR_Doc_Ref",
+      "start": 459,
+      "len": 9
+    },
+    {
+      "name": "Customer_Revenue_Org_Unit",
+      "start": 468,
+      "len": 6
+    },
+    {
+      "name": "Gen_Amnt_1",
+      "start": 474,
+      "len": 17
+    },
+    {
+      "name": "Gen_Amnt_2",
+      "start": 491,
+      "len": 17
+    },
+    {
+      "name": "Alpha_GIRN",
+      "start": 508,
+      "len": 7
+    }
+  ],
+  "S": [
+    {
+      "name": "Service_Type_Desc",
+      "start": 73,
+      "len": 30
+    },
+    {
+      "name": "Call_Type_Desc",
+      "start": 103,
+      "len": 45
+    },
+    {
+      "name": "Charge_Type_Desc",
+      "start": 148,
+      "len": 50
+    },
+    {
+      "name": "Unit_Desc",
+      "start": 198,
+      "len": 13
+    },
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 211,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 228,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Without_Discounts_GST",
+      "start": 245,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 262,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 279,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 296,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 298,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 308,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 314,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 324,
+      "len": 30
+    },
+    {
+      "name": "Call_Trans_Count",
+      "start": 354,
+      "len": 10
+    },
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 364,
+      "len": 30
+    },
+    {
+      "name": "Billing_Item_Start_Date",
+      "start": 394,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_End_Date",
+      "start": 402,
+      "len": 8
+    },
+    {
+      "name": "Extracted_To_Date",
+      "start": 410,
+      "len": 8
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 418,
+      "len": 7
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 425,
+      "len": 8
+    },
+    {
+      "name": "Billing_Element_Code",
+      "start": 433,
+      "len": 8
+    },
+    {
+      "name": "Base_Rate_Val_Without_GST",
+      "start": 441,
+      "len": 16
+    },
+    {
+      "name": "Unit_Rate_Val_Without_GST",
+      "start": 457,
+      "len": 16
+    },
+    {
+      "name": "Network_Service_Type_Code",
+      "start": 473,
+      "len": 1
+    },
+    {
+      "name": "Area_Code_Length",
+      "start": 474,
+      "len": 2
+    },
+    {
+      "name": "EPAC_Code",
+      "start": 476,
+      "len": 6
+    },
+    {
+      "name": "Telephone_Line_No",
+      "start": 482,
+      "len": 4
+    },
+    {
+      "name": "Primary_Ext_Suffix",
+      "start": 486,
+      "len": 1
+    },
+    {
+      "name": "Primary_Ext_Area_Code_Length",
+      "start": 487,
+      "len": 2
+    },
+    {
+      "name": "Primary_Ext_EPAC_Code",
+      "start": 489,
+      "len": 6
+    },
+    {
+      "name": "Primary_Ext_Line_No",
+      "start": 495,
+      "len": 4
+    },
+    {
+      "name": "Secondary_Ext_Suffix",
+      "start": 499,
+      "len": 1
+    },
+    {
+      "name": "Secondary_Ext_Line_No",
+      "start": 500,
+      "len": 4
+    },
+    {
+      "name": "Country_Code",
+      "start": 474,
+      "len": 2
+    },
+    {
+      "name": "International_No",
+      "start": 476,
+      "len": 15
+    },
+    {
+      "name": "Filler",
+      "start": 491,
+      "len": 11
+    },
+    {
+      "name": "Redefinition_Service_No",
+      "start": 474,
+      "len": 18
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 504,
+      "len": 50
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 554,
+      "len": 30
+    },
+    {
+      "name": "Message_Rate_Period_Desc",
+      "start": 584,
+      "len": 10
+    },
+    {
+      "name": "Invoice_Display_Date",
+      "start": 594,
+      "len": 8
+    },
+    {
+      "name": "Base_Rate_Price_With_GST",
+      "start": 602,
+      "len": 16
+    },
+    {
+      "name": "Unit_Rate_Price_With_GST",
+      "start": 618,
+      "len": 16
+    },
+    {
+      "name": "Display_From_Date",
+      "start": 634,
+      "len": 8
+    },
+    {
+      "name": "Display_To_Date",
+      "start": 642,
+      "len": 8
+    }
+  ],
+  "U": [
+    {
+      "name": "Service_Type_Desc",
+      "start": 73,
+      "len": 30
+    },
+    {
+      "name": "Call_Type_Desc",
+      "start": 103,
+      "len": 45
+    },
+    {
+      "name": "Unit_Measure_Item_Detail_Or_Summary",
+      "start": 148,
+      "len": 13
+    },
+    {
+      "name": "Printable_Billing_Indicator",
+      "start": 161,
+      "len": 1
+    },
+    {
+      "name": "Gross_Amnt",
+      "start": 162,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 179,
+      "len": 17
+    },
+    {
+      "name": "Amnt_Net_Discounts_Excl_GST",
+      "start": 196,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 213,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_Discounts_GST",
+      "start": 230,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 247,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 249,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 259,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 265,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 275,
+      "len": 30
+    },
+    {
+      "name": "Call_Trans_Count",
+      "start": 305,
+      "len": 10
+    },
+    {
+      "name": "Extracted_To_Date",
+      "start": 315,
+      "len": 8
+    },
+    {
+      "name": "Bill_Item_Trans_Start_Date",
+      "start": 323,
+      "len": 8
+    },
+    {
+      "name": "Bill_Item_Trans_End_Date",
+      "start": 331,
+      "len": 8
+    },
+    {
+      "name": "Alpha_GIRN",
+      "start": 339,
+      "len": 7
+    },
+    {
+      "name": "Base_Rate_Val",
+      "start": 346,
+      "len": 16
+    },
+    {
+      "name": "Unit_Rate_Val",
+      "start": 362,
+      "len": 16
+    },
+    {
+      "name": "Message_Rate_Period_Desc",
+      "start": 378,
+      "len": 10
+    },
+    {
+      "name": "Invoice_Display_Date",
+      "start": 388,
+      "len": 8
+    },
+    {
+      "name": "Base_Rate_Price",
+      "start": 396,
+      "len": 16
+    },
+    {
+      "name": "Unit_Rate_Price",
+      "start": 412,
+      "len": 16
+    },
+    {
+      "name": "Display_From_Date",
+      "start": 428,
+      "len": 8
+    },
+    {
+      "name": "Display_To_Date",
+      "start": 436,
+      "len": 8
+    }
+  ],
+  "V": [
+    {
+      "name": "Charge_Type_Desc",
+      "start": 73,
+      "len": 50
+    },
+    {
+      "name": "Service_Amnt_Up_Indicator",
+      "start": 123,
+      "len": 1
+    },
+    {
+      "name": "Service_Amnt_Down_Indicator",
+      "start": 124,
+      "len": 1
+    },
+    {
+      "name": "New_Service_Indicator",
+      "start": 125,
+      "len": 1
+    },
+    {
+      "name": "Service_History_Found_Indicator",
+      "start": 126,
+      "len": 1
+    },
+    {
+      "name": "Service_Amnt_Indicator",
+      "start": 127,
+      "len": 1
+    },
+    {
+      "name": "Amnt_Change_Indicator",
+      "start": 128,
+      "len": 1
+    },
+    {
+      "name": "Dollar_Comparison_Price",
+      "start": 129,
+      "len": 17
+    },
+    {
+      "name": "Service_Price_1",
+      "start": 146,
+      "len": 17
+    },
+    {
+      "name": "Service_Price_2",
+      "start": 163,
+      "len": 17
+    },
+    {
+      "name": "Date_Service_No_Suffix",
+      "start": 180,
+      "len": 1
+    },
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 181,
+      "len": 30
+    },
+    {
+      "name": "Contract_ID",
+      "start": 211,
+      "len": 10
+    },
+    {
+      "name": "Contract_Start_Date",
+      "start": 221,
+      "len": 8
+    },
+    {
+      "name": "Contract_End_Date",
+      "start": 229,
+      "len": 8
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 237,
+      "len": 30
+    }
+  ],
+  "X": [
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 22,
+      "len": 1
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 23,
+      "len": 18
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 41,
+      "len": 5
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 46,
+      "len": 3
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 49,
+      "len": 2
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 51,
+      "len": 1
+    },
+    {
+      "name": "Bill_Line_Txt",
+      "start": 52,
+      "len": 1
+    },
+    {
+      "name": "Bill_Message_Txt",
+      "start": 138,
+      "len": 59
+    }
+  ],
+  "Y": [
+    {
+      "name": "Gross_Amnt_Without_GST",
+      "start": 73,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 90,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Discount_Without_GST",
+      "start": 107,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 124,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 141,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 158,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 160,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 170,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 176,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 186,
+      "len": 30
+    },
+    {
+      "name": "Trans_Date",
+      "start": 216,
+      "len": 8
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 224,
+      "len": 50
+    },
+    {
+      "name": "Bill_Date",
+      "start": 274,
+      "len": 8
+    },
+    {
+      "name": "Orig_Doc_Ref_No",
+      "start": 282,
+      "len": 10
+    },
+    {
+      "name": "GIRN_Global_Item_Ref_No",
+      "start": 292,
+      "len": 7
+    }
+  ],
+  "2": [
+    {
+      "name": "Charge_Type_Desc",
+      "start": 73,
+      "len": 50
+    },
+    {
+      "name": "Gross_Amnt_Excl_Discount_GST",
+      "start": 123,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 140,
+      "len": 17
+    },
+    {
+      "name": "Amnt_Net_Discounts_Excl_GST",
+      "start": 157,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 174,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_With_Discounts_GST",
+      "start": 191,
+      "len": 17
+    },
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 208,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 210,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 220,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 226,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 236,
+      "len": 30
+    },
+    {
+      "name": "Billing_Trans_Desc",
+      "start": 266,
+      "len": 50
+    },
+    {
+      "name": "Trans_Type_Desc",
+      "start": 316,
+      "len": 25
+    },
+    {
+      "name": "Product_Billing_ID",
+      "start": 341,
+      "len": 8
+    },
+    {
+      "name": "Purchage_Order_No",
+      "start": 349,
+      "len": 16
+    },
+    {
+      "name": "Gen_Quantity",
+      "start": 365,
+      "len": 11
+    },
+    {
+      "name": "Unit_Rate_Val_Excl_GST",
+      "start": 376,
+      "len": 16
+    },
+    {
+      "name": "Unit_Rate_Price_Incl_GST",
+      "start": 392,
+      "len": 16
+    },
+    {
+      "name": "Billing_Item_Trans_Start_Date",
+      "start": 408,
+      "len": 8
+    },
+    {
+      "name": "Billing_Item_Trans_End_Date",
+      "start": 416,
+      "len": 8
+    },
+    {
+      "name": "Alpha_GIRN",
+      "start": 424,
+      "len": 7
+    }
+  ],
+  "6": [
+    {
+      "name": "Enquiries",
+      "start": 73,
+      "len": 145
+    }
+  ],
+  "7": [
+    {
+      "name": "Gen_Txt",
+      "start": 73,
+      "len": 50
+    },
+    {
+      "name": "Class_Service_Desc",
+      "start": 123,
+      "len": 35
+    },
+    {
+      "name": "Billing_Service_No",
+      "start": 158,
+      "len": 18
+    },
+    {
+      "name": "Discount_Percent_Off",
+      "start": 176,
+      "len": 8
+    },
+    {
+      "name": "Class_Service_Desc_2",
+      "start": 184,
+      "len": 30
+    },
+    {
+      "name": "Package_Name",
+      "start": 214,
+      "len": 50
+    },
+    {
+      "name": "Package_ID",
+      "start": 264,
+      "len": 10
+    },
+    {
+      "name": "Package_Tier_No",
+      "start": 274,
+      "len": 4
+    },
+    {
+      "name": "Detail_Txt_Seq_No",
+      "start": 278,
+      "len": 4
+    }
+  ],
+  "Common_MM": [
+    {
+      "name": "Doc_Ref_No",
+      "start": 1,
+      "len": 10
+    },
+    {
+      "name": "Sec_Sort_Seq_No",
+      "start": 11,
+      "len": 9
+    },
+    {
+      "name": "Record_Type",
+      "start": 20,
+      "len": 1
+    },
+    {
+      "name": "Sec_Code",
+      "start": 21,
+      "len": 1
+    },
+    {
+      "name": "Marker_CD",
+      "start": 22,
+      "len": 1
+    },
+    {
+      "name": "Marker_Attr",
+      "start": 23,
+      "len": 1
+    },
+    {
+      "name": "Gen_Txt",
+      "start": 24,
+      "len": 80
+    },
+    {
+      "name": "Gross_Amnt",
+      "start": 104,
+      "len": 17
+    },
+    {
+      "name": "Discount_Amnt",
+      "start": 121,
+      "len": 17
+    },
+    {
+      "name": "Net_Amnt_Excl_GST",
+      "start": 138,
+      "len": 17
+    },
+    {
+      "name": "GST_Amnt",
+      "start": 155,
+      "len": 17
+    },
+    {
+      "name": "Price_Amnt_Incl_GST",
+      "start": 172,
+      "len": 17
+    }
+  ],
+  "MA": [
+    {
+      "name": "Relative_Hier_Lev_No",
+      "start": 189,
+      "len": 2
+    },
+    {
+      "name": "Parent_Hier_Pnt_ID",
+      "start": 191,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Seq_No",
+      "start": 201,
+      "len": 6
+    },
+    {
+      "name": "Hier_Pnt_ID",
+      "start": 207,
+      "len": 10
+    },
+    {
+      "name": "Hier_Pnt_Desc",
+      "start": 217,
+      "len": 30
+    }
+  ],
+  "MB": [
+    {
+      "name": "Invoicing_Class_Service_Desc",
+      "start": 189,
+      "len": 30
+    },
+    {
+      "name": "Billing_Service_No",
+      "start": 219,
+      "len": 18
+    },
+    {
+      "name": "Service_No_Label_Txt",
+      "start": 237,
+      "len": 13
+    },
+    {
+      "name": "Service_No_Label",
+      "start": 250,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_1",
+      "start": 280,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_2",
+      "start": 310,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_3",
+      "start": 340,
+      "len": 30
+    },
+    {
+      "name": "Service_Location_4",
+      "start": 370,
+      "len": 30
+    },
+    {
+      "name": "Location_Txt_1",
+      "start": 400,
+      "len": 20
+    },
+    {
+      "name": "Location_Txt_2",
+      "start": 420,
+      "len": 20
+    },
+    {
+      "name": "Formatted_Billing_Service_No",
+      "start": 440,
+      "len": 24
+    }
+  ],
+  "MC": [
+    {
+      "name": "Service_Type",
+      "start": 189,
+      "len": 30
+    }
+  ],
+  "MD": [
+    {
+      "name": "Orig_Doc_Ref_No",
+      "start": 189,
+      "len": 10
+    }
+  ],
+  "MF": [
+    {
+      "name": "Orig_Doc_Ref_No",
+      "start": 189,
+      "len": 10
+    },
+    {
+      "name": "Orig_Bill_Pull_Date",
+      "start": 199,
+      "len": 8
+    }
+  ],
+  "MG": [
+    {
+      "name": "Gen_Txt",
+      "start": 189,
+      "len": 50
+    }
+  ],
+  "MH": [
+    {
+      "name": "Package_Name",
+      "start": 189,
+      "len": 50
+    }
+  ],
+  "MM": [
+    {
+      "name": "Misc_Type_Code",
+      "start": 189,
+      "len": 3
+    },
+    {
+      "name": "Gen_Txt",
+      "start": 192,
+      "len": 80
+    }
+  ],
+  "MP": [
+    {
+      "name": "Pricing_Plan_Type",
+      "start": 189,
+      "len": 1
+    },
+    {
+      "name": "Name_Pricing_Plan",
+      "start": 190,
+      "len": 50
+    }
+  ],
+  "MQ": [
+    {
+      "name": "Pricing_Plan_Type",
+      "start": 189,
+      "len": 1
+    },
+    {
+      "name": "Name_Pricing_Subplan",
+      "start": 190,
+      "len": 30
+    }
+  ],
+  "MS": [
+    {
+      "name": "Sec_Desc",
+      "start": 189,
+      "len": 80
+    }
+  ],
+  "MU": [
+    {
+      "name": "Gen_Txt",
+      "start": 189,
+      "len": 80
+    }
+  ],
+  "MV": [
+    {
+      "name": "Dir_Type_Code",
+      "start": 189,
+      "len": 3
+    },
+    {
+      "name": "Dir_Type_Desc",
+      "start": 192,
+      "len": 40
+    }
+  ],
+  "MW": [
+    {
+      "name": "Dir_Product_Desc",
+      "start": 189,
+      "len": 40
+    }
+  ],
+  "MX": [
+    {
+      "name": "Dir_Listing_No",
+      "start": 189,
+      "len": 30
+    }
+  ],
+  "MY": [
+    {
+      "name": "MIPP_Acnt_Desc",
+      "start": 189,
+      "len": 50
+    },
+    {
+      "name": "MIPP_Acnt_ID",
+      "start": 239,
+      "len": 20
+    },
+    {
+      "name": "Issue_Date_Txt",
+      "start": 259,
+      "len": 10
+    },
+    {
+      "name": "Invoice_Issue_Date",
+      "start": 269,
+      "len": 8
+    }
+  ],
+  "MZ": [
+    {
+      "name": "Dir_Misc_Code",
+      "start": 189,
+      "len": 1
+    },
+    {
+      "name": "Gen_Txt_2",
+      "start": 190,
+      "len": 80
+    },
+    {
+      "name": "Bit_Start_Date",
+      "start": 270,
+      "len": 8
+    },
+    {
+      "name": "FID_Txt_2",
+      "start": 278,
+      "len": 30
+    },
+    {
+      "name": "FID_Txt_3",
+      "start": 308,
+      "len": 30
+    }
+  ]
+}
