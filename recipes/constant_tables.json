@@ -1,0 +1,111 @@
+{
+  "constant_tables": [
+    {
+      "name": "tier_mapping",
+      "content": [
+        {
+          "tier_label": "Balance_Forward",
+          "tier_name": "Account Activity (incl GST)",
+          "tier_sort": "10",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Previous_Balance",
+          "tier_name": "Previous Balance",
+          "tier_sort": "10",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Payments",
+          "tier_name": "Payments Received",
+          "tier_sort": "20",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Adjustments",
+          "tier_name": "Adjustments",
+          "tier_sort": "30",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Current_Charges",
+          "tier_name": "New Charges (incl GST)",
+          "tier_sort": "20",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Group_Plan_Charges",
+          "tier_name": "Group Plan Charges",
+          "tier_sort": "10",
+          "remit_sort": "50"
+        },
+        {
+          "tier_label": "Call_and_Usage_Charges",
+          "tier_name": "Call and Usage Charges",
+          "tier_sort": "20",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Service_Charges",
+          "tier_name": "Service and Equipment Charges",
+          "tier_sort": "30",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Directory_Charges",
+          "tier_name": "Directory Charges",
+          "tier_sort": "35",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Other_Charges_and_Credits",
+          "tier_name": "Other Charges and Credits",
+          "tier_sort": "40",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Savings_Due_to_Options",
+          "tier_name": "Savings Due to Options",
+          "tier_sort": "50",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Total_Separate_Purchases",
+          "tier_name": "Total Separate Purchases",
+          "tier_sort": "60",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Account_Adjustments",
+          "tier_name": "Billing Adjustments",
+          "tier_sort": "70",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Bill_Rounding",
+          "tier_name": "Rounding",
+          "tier_sort": "80",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Other_Charges",
+          "tier_name": "Other Charges",
+          "tier_sort": "999",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "GST",
+          "tier_name": "GST - click to view",
+          "tier_sort": "30",
+          "remit_sort": null
+        },
+        {
+          "tier_label": "Dynamic",
+          "tier_name": null,
+          "tier_sort": "999",
+          "remit_sort": null
+        }
+      ]
+    }
+  ]
+}
