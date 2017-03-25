@@ -13,8 +13,9 @@ public class GDFTransformReduce extends Reducer<Text, Text, Text, IntWritable> {
 		
 		for (Text value : values) {
 			String line = value.toString();
-			if (!line.equals("no use"))
+			if (!line.equals("no use")){
 				count ++;
+			}
 		}
 		System.out.println("in reducer key: " + key.toString() + " with count: " + count);
 		

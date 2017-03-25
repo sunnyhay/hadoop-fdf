@@ -1,201 +1,207 @@
 {
-  "A": 
-  {
-    "filter_criteria": 
+  "A": [
     {
-      "field_name": "Line_Attr_1",
-      "field_val": "AG",
-      "rule": "equal"
-    },
-    "constant_tables": 
-    [
-      {
-        "src": "tier_mapping",
-        "selection": 
-        [
-          {
-            "dest": "tier1",
-            "select_fields": 
-            [
-              "tier_name",
-              "tier_sort"
-            ],
-            "select_key": "Current_Charges"
-          },
-          {
-            "dest": "tier2",
-            "select_fields": 
-            [
-              "tier_name",
-              "tier_sort"
-            ],
-            "select_key": "Bill_Rounding"
-          }
-        ]
-      }
-    ],
-    "fields": 
-    [
-      {
-        "name": "client_id",
-        "src": "constant",
-        "val": "67"
+      "report": "Statement",
+      "filter_criteria": {
+        "field_name": "Line_Attr_1",
+        "field_val": "AG",
+        "rule": "equal"
       },
-      {
-        "name": "acct_num",
-        "src": "A",
-        "src_field": "Account_Number_R1"
-      },
-      {
-        "name": "billed_dt",
-        "src": "A",
-        "src_field": "Doc_Issue_Date_H"
-      },
-      {
-        "name": "billed_status_flg",
-        "src": "constant",
-        "val": "1"
-      },
-      {
-        "name": "invoice_nbr",
-        "src": "A",
-        "src_field": "Bill_No_H"
-      },
-      {
-        "name": "due_dt",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "type_flg",
-        "src": "constant",
-        "val": "1"
-      },
-      {
-        "name": "tier_1_nme",
-        "src": "constant_tables.tier_mapping",
-        "val": "tier1.tier_name"
-      },
-      {
-        "name": "tier_1_sort",
-        "src": "constant_tables.tier_mapping",
-        "val": "tier1.tier_sort"
-      },
-      {
-        "name": "tier_2_nme",
-        "src": "constant_tables.tier_mapping",
-        "val": "tier2.tier_name"
-      },
-      {
-        "name": "tier_2_sort",
-        "src": "constant_tables.tier_mapping",
-        "val": "tier2.tier_sort"
-      },
-      {
-        "name": "tier_3_nme",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "tier_3_sort",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "tier_4_nme",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "tier_4_sort",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "amt",
-        "src": "A",
-        "src_field": "GST_Amnt"
-      },
-      {
-        "name": "origin_num",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "plan_include",
-        "src": "constant",
-        "val": "0"
-      },
-      {
-        "name": "taxplan_include",
-        "src": "constant",
-        "val": "0"
-      },
-      {
-        "name": "other_include",
-        "src": "constant",
-        "val": "0"
-      },
-      {
-        "name": "payment_suppress",
-        "src": "constant",
-        "val": "0"
-      },
-      {
-        "name": "file_type_id",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "subacct_num",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "subacct_type",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "file_type_tier_id",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "statement_detail_tier_id",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "statement_detail_cd",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "cost_display_suppress_flg",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "usage_meter",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "icon_code",
-        "src": "constant",
-        "val": null
-      },
-      {
-        "name": "temp_field_1",
-        "src": "A",
-        "src_field": "Payment_Due_Date_H"
-      },
-      {
-        "name": "temp_field_2",
-        "src": "A",
-        "src_field": "Bill_Date_H"
-      }
-    ]
-  }
+      "constant_tables": [
+        {
+          "src": "tier_mapping",
+          "selection": [
+            {
+              "dest": "tier1",
+              "select_fields": [
+                "tier_name",
+                "tier_sort"
+              ],
+              "select_key": "Current_Charges"
+            },
+            {
+              "dest": "tier2",
+              "select_fields": [
+                "tier_name",
+                "tier_sort"
+              ],
+              "select_key": "Bill_Rounding"
+            }
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "name": "client_id",
+          "src": "constant",
+          "val": "67"
+        },
+        {
+          "name": "acct_num",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "billed_dt",
+          "src": "A",
+          "src_field": "Doc_Issue_Date_H"
+        },
+        {
+          "name": "billed_status_flg",
+          "src": "constant",
+          "val": "1"
+        },
+        {
+          "name": "invoice_nbr",
+          "src": "A",
+          "src_field": "Bill_No_H"
+        },
+        {
+          "name": "due_dt",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "type_flg",
+          "src": "constant",
+          "val": "1"
+        },
+        {
+          "name": "tier_1_nme",
+          "src": "constant_tables.tier_mapping.tier1",
+          "val": "tier_name"
+        },
+        {
+          "name": "tier_1_sort",
+          "src": "constant_tables.tier_mapping.tier1",
+          "val": "tier_sort"
+        },
+        {
+          "name": "tier_2_nme",
+          "src": "constant_tables.tier_mapping.tier2",
+          "val": "tier_name"
+        },
+        {
+          "name": "tier_2_sort",
+          "src": "constant_tables.tier_mapping.tier2",
+          "val": "tier_sort"
+        },
+        {
+          "name": "tier_3_nme",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "tier_3_sort",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "tier_4_nme",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "tier_4_sort",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "amt",
+          "src": "A",
+          "src_field": "GST_Amnt"
+        },
+        {
+          "name": "origin_num",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "plan_include",
+          "src": "constant",
+          "val": "0"
+        },
+        {
+          "name": "taxplan_include",
+          "src": "constant",
+          "val": "0"
+        },
+        {
+          "name": "other_include",
+          "src": "constant",
+          "val": "0"
+        },
+        {
+          "name": "payment_suppress",
+          "src": "constant",
+          "val": "0"
+        },
+        {
+          "name": "file_type_id",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "subacct_num",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "subacct_type",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "file_type_tier_id",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "statement_detail_tier_id",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "statement_detail_cd",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "cost_display_suppress_flg",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "usage_meter",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "icon_code",
+          "src": "constant",
+          "val": null
+        },
+        {
+          "name": "temp_field_1",
+          "src": "A",
+          "src_field": "Payment_Due_Date_H"
+        },
+        {
+          "name": "temp_field_2",
+          "src": "A",
+          "src_field": "Bill_Date_H"
+        },
+        {
+          "name": "temp_field_3",
+          "src": "A",
+          "src_field": "Gen_Business_Arrangement_H"
+        },
+        {
+          "name": "temp_field_4",
+          "src": "A",
+          "src_field": "CIDN_R1"
+        }
+      ]
+    }
+  ]
 }
